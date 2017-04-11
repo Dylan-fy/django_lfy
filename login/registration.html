@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/css/login.css" rel="stylesheet">
+       <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+
+  <!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Paper Stack</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        function onSub(){
+            var username =document.getElementById("username");
+            var password=document.getElementById("password");
+            var repwd =document.getElementsByClassName("repassword");
+            if(username==""){
+                alert("用户名不能为空！");
+                return false;
+            }
+            else if(password==""){
+                alert("密码不能为空！");
+                return false;
+            }
+{#            else if(repwd!=password){#}
+{#                alert("重复密码要与密码一致！");#}
+{#                return false;#}
+{#            }#}
+
+        }
+    </script>
+</head>
+<body>
+
+
+
+<div class="container">
+	<section id="content">
+		<form action="{%url 'acc_regist' %}" method="post">
+			<h1>账号注册</h1>
+			<div>
+				<input type="text" placeholder="用户名" required="" id="username" name="username" />
+			</div>
+			<div>
+				<input type="password" placeholder="密码" required="" id="password"  name="password"/>
+			</div>
+            <div>
+				<input type="password" placeholder="再次输入密码" required="" id="password" name="repassword"/>
+			</div>
+			<div>
+				<input type="submit" value="注册" />
+				<a href="#"></a>
+			</div>
+		</form><!-- form -->
+	</section><!-- content -->
+</div><!-- container -->
+</body>
+</html>
+
+
+
+  </body>
+</html>
