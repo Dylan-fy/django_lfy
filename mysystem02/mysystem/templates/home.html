@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content=""><meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Le styles -->
+    <link href="/static/box/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/box/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/box/css/stylesheet.css" rel="stylesheet">
+    <link href="/static/box/css/index.css" rel="stylesheet">
+    <link href="/static/box/icon/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/box/img/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/box/img/apple-touch-icon-114-precomposed.html">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/box/img/apple-touch-icon-72-precomposed.html">
+                    <link rel="apple-touch-icon-precomposed" href="/static/box/img/apple-touch-icon-57-precomposed.html">
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+
+
+    <script>
+        function getclassname(obj){
+		if(document.getElementsByClassName('link_onclick').length==0){
+			obj.className='link_onclick';
+			obj.id='link_onclick';
+			}else{
+				var obj1=document.getElementById('link_onclick');
+				obj1.className='111';
+				obj1.id='1';
+				obj.className='link_onclick';
+			   obj.id='link_onclick';
+
+
+			}
+
+
+		}
+
+    </script>
+  </head>
+
+
+  <body>
+
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">主机管理系统</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <li><a href="{%url 'home'%}">主页</a></li>
+        <li class="active"><a href="{%url 'host_management'%}">主机管理</a></li>
+        <li><a href="{%url 'user_management'%}">用户管理</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">查找主机</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">账号中心<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{%url 'personal_center'%}">个人中心</a></li>
+              <li class="divider"></li>
+            <li><a href="{%url 'home'%}">退出登录</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <h1>个人中心</h1>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+
+
+  <body>
+
+
+
+
+{#    <div id="main_navigation" class="dark_navigation"> <!-- Main navigation start -->#}
+{#        <div class="inner_navigation" >#}
+{##}
+{#            <ul class="main" >#}
+{#                <li ><a class="expand"  href={%url 'user_management'%}><i class="icon-home"></i>&nbsp;&nbsp;用户管理</a>#}
+{#                    <ul class="sub_main" style="background-color: #20477C;">#}
+{#                          <div style=" height:8px; width:100%;"></div>#}
+{#                          <li><a href="{%url 'user_management'%}" target="right" onClick="getclassname(this)">用户管理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="float:right;font-size:20px;">></font></a></li>#}
+{#                          <li><a href="personal_center.html" target="right" onClick="getclassname(this)">权限管理&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="float:right;font-size:20px;">></font></a></li>#}
+{#                           <div style=" height:8px; width:100%;"></div>#}
+{##}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li><a href="{%url 'host_management'%}" target="right" onClick="getclassname(this)"><i class="icon-reorder"></i>&nbsp;&nbsp;主机管理</a>#}
+{##}
+{#                </li>#}
+{##}
+{#                <li><a href="page_calendar.html"><i class="icon-calendar"></i>&nbsp;&nbsp;产品管理</a></li>#}
+{#                <li><a href="page_statistics.html"><i class="icon-signal"></i>&nbsp;&nbsp;消息管理</a></li>#}
+{#                <li><a href="#"><i class="icon-table"></i>&nbsp;&nbsp;历史记录</a>#}
+{##}
+{#                </li>#}
+{##}
+{##}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#    <div id="content" class="no-sidebar">#}
+{#     <!-- Content start -->#}
+{##}
+{##}
+{##}
+{#               <!-- Content END -->#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{#    </div>#}
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/box/js/jquery-1.10.2.js"></script>
+    <script src="/static/box/js/jquery-ui-1.10.3.js"></script>
+    <script src="/static/box/js/bootstrap.js"></script>
+
+    <script src="/static/box/js/library/jquery.collapsible.min.js"></script>
+    <script src="/static/box/js/library/jquery.mCustomScrollbar.min.js"></script>
+    <script src="/static/box/js/library/jquery.mousewheel.min.js"></script>
+    <script src="/static/box/js/library/jquery.uniform.min.js"></script>
+
+
+    <script src="/static/box/js/library/jquery.sparkline.min.js"></script>
+    <script src="/static/box/js/library/chosen.jquery.min.js"></script>
+    <script src="/static/box/js/library/jquery.easytabs.js"></script>
+    <script src="/static/box/js/library/flot/excanvas.min.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.pie.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.selection.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.resize.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.orderBars.js"></script>
+    <script src="/static/box/js/library/maps/jquery.vmap.js"></script>
+    <script src="/static/box/js/library/maps/maps/jquery.vmap.world.js"></script>
+    <script src="/static/box/js/library/maps/data/jquery.vmap.sampledata.js"></script>
+    <script src="/static/box/js/library/jquery.autosize-min.js"></script>
+    <script src="/static/box/js/library/charCount.js"></script>
+    <script src="/static/box/js/library/jquery.minicolors.js"></script>
+    <script src="/static/box/js/library/jquery.tagsinput.js"></script>
+    <script src="/static/box/js/library/fullcalendar.min.js"></script>
+    <script src="/static/box/js/library/footable/footable.js"></script>
+    <script src="/static/box/js/library/footable/data-generator.js"></script>
+
+    <script src="/static/box/js/library/bootstrap-datetimepicker.js"></script>
+    <script src="/static/box/js/library/bootstrap-timepicker.js"></script>
+    <script src="/static/box/js/library/bootstrap-datepicker.js"></script>
+    <script src="/static/box/js/library/bootstrap-fileupload.js"></script>
+    <script src="/static/box/js/library/jquery.inputmask.bundle.js"></script>
+
+    <script src="/static/box/js/flatpoint_core.js"></script>
+
+    <script>
+        jQuery('#vmap').vectorMap({
+            map:"world_en",
+            backgroundColor:null,
+            color:"#ffffff",
+            hoverOpacity:.7,
+            selectedColor:"#2d91ef",
+            enableZoom:0,
+            showTooltip:1,
+            values:sample_data,
+            scaleColors:["#8cc3f6","#5c86ac"],
+            normalizeFunction:"polynomial",
+            onRegionClick:function(){alert("This Region has "+(Math.floor(Math.random()*10)+1)+" users!"
+            )}
+        });
+
+        jQuery(document).ready(function($) {
+            $('.footable').footable();
+            $('.responsive_table_container').mCustomScrollbar({
+                set_height: 400,
+                advanced:{
+                  updateOnContentResize: true,
+                  updateOnBrowserResize: true
+                }
+            });
+
+            $('.responsive_table_container_2').mCustomScrollbar({
+                set_height: 520,
+                advanced:{
+                  updateOnContentResize: true,
+                  updateOnBrowserResize: true
+                }
+            });
+        });
+    </script>
+
+    <script src="/static/box/js/calendar.js"></script>
+    <script src="/static/box/js/forms.js"></script>
+    <script src="/static/box/js/dashboard.js"></script>
+
+  </body>
+</html>
