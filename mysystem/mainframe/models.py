@@ -18,6 +18,7 @@ class Computer(models.Model):
     memory = models.CharField(max_length=100,verbose_name='内存')
     state = models.BooleanField(verbose_name='状态')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    user = models.ForeignKey(User,related_name='user_computer')
 
     def __str__(self):
         return  self.computername

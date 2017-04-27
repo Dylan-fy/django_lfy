@@ -102,17 +102,8 @@ border-radius:0px;}
                                <!--tree begin-->
                                  <div class="user_tab">
                                          <ul>
-                                           <a href="基本资料.html" target="table"><li onClick="getclassname(this)" ><span>基本资料</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>基本病情</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>并发症</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>生活习惯</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>血糖警告</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>医护团队</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>常用指标</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>个人补充</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>病史资料</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>人体成分测试</span></li></a>
-                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>血糖数据</span></li></a>
+                                           <a href="#" target="table"><li onClick="getclassname(this)" ><span>基本资料</span></li></a>
+
                                          </ul>
 
                                  </div>
@@ -121,9 +112,13 @@ border-radius:0px;}
                                 <!--right begin-->
                                  <div class="user_iframe">
 
-                                   <iframe src="#" name="table" frameborder="0" width="100%" style="height:550px;">
+                                   <iframe src="{%url 'new'%}" name="table" frameborder="0" width="100%" style="height:550px;">
 
                                    </iframe>
+
+{#                                     <iframe src="{%url 'mainframe_one' %}" frameborder="0">#}
+{##}
+{#                                     </iframe>#}
 
                                  </div>
                                <!--right end-->

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>对象</h2>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>主机名</th>
+                <th>ip</th>
+                <th>port</th>
+                <th>业务线</th>
+                <th>业务线编码</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in host_obj %}
+                <tr hidden="{{ i.username }}" tabindex="{{ i.b_username }}">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.password }}</td>
+
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <h2>字典</h2>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>主机名</th>
+                <th>ip</th>
+                <th>port</th>
+                <th>业务线编码</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for i in host_obj2 %}
+                <tr hid="{{ i.username }}" bid="{{ i.b_username }}">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.password }}</td>
+
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <h2>元组</h2>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>主机名</th>
+                <th>ip</th>
+                <th>port</th>
+                <th>业务线编码</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for i in host_obj3 %}
+                <tr hid="{{ i.0 }}" bid="{{ i.b_username }}">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ i.1 }}</td>
+                    <td>{{ i.2 }}</td>
+                    <td>{{ i.3 }}</td>
+                    <td>{{ i.4 }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</body>
+</html>

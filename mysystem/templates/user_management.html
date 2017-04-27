@@ -8,7 +8,16 @@
 
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+     <link href="/static/box/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/box/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/static/box/css/stylesheet.css" rel="stylesheet">
+    <link href="/static/box/css/index.css" rel="stylesheet">
+    <link href="/static/box/icon/font-awesome.css" rel="stylesheet">
 
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/box/img/apple-touch-icon-144-precomposed.html">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/box/img/apple-touch-icon-114-precomposed.html">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/box/img/apple-touch-icon-72-precomposed.html">
+      <link rel="apple-touch-icon-precomposed" href="/static/box/img/apple-touch-icon-57-precomposed.html">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,13 +37,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">主机管理系统</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-          <li><a href="{%url 'home'%}">主页</a></li>
+          <li><a href="{%url 'home'%}">首页</a></li>
         <li class="active"><a href="{%url 'host_management'%}">主机管理</a></li>
         <li><a href="{%url 'user_management'%}">用户管理</a></li>
       </ul>
@@ -49,11 +57,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">账号中心<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="{%url 'login'%}">登录</a></li>
+            <li><a href="{%url 'user_management'%}">个人中心</a></li>
               <li class="divider"></li>
-            <li><a href="{%url 'registration'%}">注册</a></li>
-              <li class="divider"></li>
-            <li><a href="{%url 'personal_center'%}">个人中心</a></li>
+            <li><a href="{%url 'logout'%}">退出登录</a></li>
           </ul>
         </li>
       </ul>
@@ -61,7 +67,115 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-    <h1>gunnimade</h1>
+<body>
+
+
+    <div id="content"> <!-- Content start -->
+      <div class="inner_content">
+          <div class="widgets_area">
+                <div class="row-fluid">
+                    <div class="span12">
+                         <div  class="daohanglink"style="">
+                           <span class="daohang"></span>
+                           <span>首页</span><span>></span>
+
+                           <span><a href="{%url 'chakan'%}"></a>主机管理</span>
+                           <a  href="{%url 'add'%}" class="label label-warning" style="float:right; margin:8px;">添加</a>
+                         </div>
+                        <div class="well brown">
+
+
+                            <div class="well-content" style="border:0px;">
+                                <table class="table table-striped table-bordered table-hover datatable">
+                                    <thead>
+                                        <tr>
+
+                                            <th width="20%">用户名</th>
+                                            <th width="10%">密码</th>
+                                            <th width="15%">创建时间</th>
+{#                                            <th width="10%">用户类型</th>#}
+{#                                            <th width="15%">管理操作</th>#}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for user in user_list %}
+
+                                        <tr>
+{#                                            <td>{{ user.id }}</td>#}
+                                            <td>{{ user.username }}</td>
+                                            <td>{{ user.password }}</td>
+{#                                            <td>男</td>#}
+{#                                            <td>12345678901</td>#}
+                                            <td>{{ user.created_at }}</td>
+{#                                            <td>启用</td>#}
+{#                                            <td>#}
+{#                                            <a class="btn" href="#" title="修改"><i class="icon-inbox"></i></a>#}
+{#                                            <a class="btn" href="#" title="删除"><i class="icon-trash"></i></a>#}
+{#                                            <a class="btn" href="#" title="查看"><i class="icon-exclamation"></i></a>#}
+{#                                            </td>#}
+                                        </tr>
+                                    {% endfor %}
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/box/js/jquery-1.10.2.js"></script>
+    <script src="/static/box/js/jquery-ui-1.10.3.js"></script>
+    <script src="/static/box/js/bootstrap.js"></script>
+
+    <script src="/static/box/js/library/jquery.collapsible.min.js"></script>
+    <script src="/static/box/js/library/jquery.mCustomScrollbar.min.js"></script>
+    <script src="/static/box/js/library/jquery.mousewheel.min.js"></script>
+    <script src="/static/box/js/library/jquery.uniform.min.js"></script>
+
+
+    <script src="/static/box/js/library/jquery.sparkline.min.js"></script>
+    <script src="/static/box/js/library/chosen.jquery.min.js"></script>
+    <script src="/static/box/js/library/jquery.easytabs.js"></script>
+    <script src="/static/box/js/library/flot/excanvas.min.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.pie.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.selection.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.resize.js"></script>
+    <script src="/static/box/js/library/flot/jquery.flot.orderBars.js"></script>
+    <script src="/static/box/js/library/maps/jquery.vmap.js"></script>
+    <script src="/static/box/js/library/maps/maps/jquery.vmap.world.js"></script>
+    <script src="/static/box/js/library/maps/data/jquery.vmap.sampledata.js"></script>
+    <script src="/static/box/js/library/jquery.autosize-min.js"></script>
+    <script src="/static/box/js/library/charCount.js"></script>
+    <script src="/static/box/js/library/jquery.minicolors.js"></script>
+    <script src="/static/box/js/library/jquery.tagsinput.js"></script>
+    <script src="/static/box/js/library/fullcalendar.min.js"></script>
+    <script src="/static/box/js/library/footable/footable.js"></script>
+    <script src="/static/box/js/library/footable/data-generator.js"></script>
+
+    <script src="/static/box/js/library/bootstrap-datetimepicker.js"></script>
+    <script src="/static/box/js/library/bootstrap-timepicker.js"></script>
+    <script src="/static/box/js/library/bootstrap-datepicker.js"></script>
+    <script src="/static/box/js/library/bootstrap-fileupload.js"></script>
+    <script src="/static/box/js/library/jquery.inputmask.bundle.js"></script>
+
+    <script src="/static/box/js/library/jquery.dataTables.js"></script>
+
+    <script src="/static/box/js/flatpoint_core.js"></script>
+
+    <script src="/static/box/js/datatables.js"></script>
+
+  </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>

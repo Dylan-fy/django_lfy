@@ -20,20 +20,23 @@
 
 <div class="container">
 	<section id="content">
-		<form action="">
-			<h1>用户登录</h1>
+		<form  class="form-signin" role="form" action="{%url 'acc_login' %}" method="post">
+			<h2 class="form-signin-heading">用户登录</h2>
+            <h3>{{error}}</h3>
 			<div>
-				<input type="text" placeholder="用户名" required="" id="username" />
+				<input type="text" placeholder="用户名" required="" id="username" name = "username"/>
 			</div>
 			<div>
-				<input type="password" placeholder="密码" required="" id="password" />
+				<input type="password"  placeholder="密码" required="" name="password" id="password"/>
 			</div>
 			<div>
 				<input type="submit" value="登录" /><!-- content -->
 				<a href="#">忘记密码?</a>
-                <a href="registration.html">注册</a>
+                <a href="{%url 'registration'%}">注册</a>
 			</div>
 		</form><!-- form -->
+
+
 
 	</section><!-- content -->
 </div><!-- container -->
@@ -42,5 +45,4 @@
 
 
 
-  </body>
-</html>
+
